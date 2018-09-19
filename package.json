@@ -1,0 +1,27 @@
+{
+  "name": "exec-appx",
+  "version": "0.0.0",
+  "description": "Executes a Windows Store app (Appx)",
+  "license": "MIT",
+  "scripts": {
+    "test": "eslint index.js"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idleberg/node-exec-appx.git"
+  },
+  "keywords": [
+    "appx",
+    "windows store",
+    "windows store app",
+    "microsoft store"
+  ],
+  "dependencies": {
+    "get-appx-path": "^0.2.0",
+    "util": "^0.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.5.0"
+  }
+}
