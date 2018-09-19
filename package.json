@@ -15,7 +15,8 @@
     "appx",
     "windows store",
     "windows store app",
-    "microsoft store"
+    "microsoft store",
+    "windows universal app"
   ],
   "dependencies": {
     "get-appx-path": "^0.2.0",
