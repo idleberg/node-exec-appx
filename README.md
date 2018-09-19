@@ -28,7 +28,7 @@ const execAppx = require('exec-appx');
 const appID = 'SpotifyAB.SpotifyMusic';
 
 (async () => {
-    let pkg = await execAppx(appID);
+    await execAppx(appID);
 })();
 
 ```
