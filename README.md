@@ -5,11 +5,11 @@
 [![CircleCI](https://flat.badgen.net/circleci/github/idleberg/node-exec-appx)](https://circleci.com/gh/idleberg/node-exec-appx)
 [![David](https://flat.badgen.net/david/dev/idleberg/node-exec-appx)](https://david-dm.org/idleberg/node-exec-appx?type=dev)
 
-Executes a Windows Store app (Appx)
+Executes a Windows Store application (Appx)
 
 ## Prerequisites
 
-This library requires PowerShell 5.0 (or higher) and a Windows version with support for Windows Store apps
+This library requires PowerShell 5.0 (or higher) and for the Windows Store
 
 ## Installation
 
@@ -43,7 +43,8 @@ See [`child_process.spawn`](https://nodejs.org/api/child_process.html#child_proc
 
 ## Related
 
-- [get-appx-path](https://github.com/idleberg/node-get-appx-path)
+- [get-appx-manifest](https://www.npmjs.com/package/get-appx-manifest)
+- [get-appx-path](https://www.npmjs.com/package/get-appx-path)
 
 ## License
 

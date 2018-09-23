@@ -1,7 +1,7 @@
 {
   "name": "exec-appx",
   "version": "0.1.0",
-  "description": "Executes a Windows Store app (Appx)",
+  "description": "Executes a Windows Store application (Appx)",
   "license": "MIT",
   "scripts": {
     "test": "eslint index.js"
