@@ -4,6 +4,7 @@
   "description": "Executes a Windows Store application (Appx)",
   "license": "MIT",
   "scripts": {
+    "precommit": "npm run test",
     "test": "eslint index.js"
   },
   "main": "index.js",
@@ -23,6 +24,7 @@
     "util": "^0.11.0"
   },
   "devDependencies": {
-    "eslint": "^5.5.0"
+    "eslint": "^5.5.0",
+    "husky": "^1.0.0"
   }
 }
