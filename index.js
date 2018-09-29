@@ -9,7 +9,7 @@ const spawnAsync = promisify(spawn);
 
 module.exports = (appID, args = [], options = {}) => {
     if (platform() !== 'win32') {
-        throw 'Error: This library requires PowerShell 5.0 (or higher) and for the Windows Store';
+        throw 'Error: This library requires PowerShell 5.0 (or higher) and support for the Windows Store';
     }
 
     options = Object.assign({
