@@ -3,7 +3,6 @@
 [![npm](https://flat.badgen.net/npm/license/exec-appx)](https://www.npmjs.org/package/exec-appx)
 [![npm](https://flat.badgen.net/npm/v/exec-appx)](https://www.npmjs.org/package/exec-appx)
 [![CircleCI](https://flat.badgen.net/circleci/github/idleberg/node-exec-appx)](https://circleci.com/gh/idleberg/node-exec-appx)
-[![David](https://flat.badgen.net/david/dev/idleberg/node-exec-appx)](https://david-dm.org/idleberg/node-exec-appx?type=dev)
 
 Executes a Windows Store application (Appx)
 
