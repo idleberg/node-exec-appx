@@ -1,39 +1,35 @@
 # exec-appx
 
-[![npm](https://flat.badgen.net/npm/license/exec-appx)](https://www.npmjs.org/package/exec-appx)
-[![npm](https://flat.badgen.net/npm/v/exec-appx)](https://www.npmjs.org/package/exec-appx)
-[![CircleCI](https://flat.badgen.net/circleci/github/idleberg/node-exec-appx)](https://circleci.com/gh/idleberg/node-exec-appx)
+[![License](https://img.shields.io/github/license/idleberg/node-exec-appx?color=blue&style=for-the-badge)](https://github.com/idleberg/node-exec-appx/blob/main/LICENSE)
+[![Version: npm](https://img.shields.io/npm/v/exec-appx?style=for-the-badge)](https://www.npmjs.org/package/exec-appx)
+![GitHub branch check runs](https://img.shields.io/github/check-runs/idleberg/node-exec-appx/main?style=for-the-badge)
 
-Executes a Windows Store application (Appx)
+Executes a Windows Store application (Appx).
 
 ## Prerequisites
 
-This library requires PowerShell 5.0 (or higher) and support for the Windows Store
+This library requires PowerShell 5.0 (or higher) and support for the Windows Store.
 
 ## Installation
 
-`yarn add exec-appx || npm install exec-appx`
+`npm install exec-appx`
 
 ## Usage
 
-`execAppx(appID: string, args: Array, options: Object)`
+`execAppx(appID, spawnArgs = [], spawnOptions = {})`
 
 Example usage in script:
 
 ```js
 const execAppx = require('exec-appx');
 
-// Application ID
-const appID = 'SpotifyAB.SpotifyMusic';
+const appID = 'Mozilla.Firefox';
 
-(async () => {
-    try {
-        await execAppx(appID);
-    } catch (err) {
-        console.error(err);
-    }
-})();
-
+	try {
+			await execAppx(appID);
+	} catch (err) {
+			console.error(err);
+	}
 ```
 
 ### Options
@@ -43,8 +39,8 @@ See [`child_process.spawn`](https://nodejs.org/api/child_process.html#child_proc
 ## Related
 
 - [get-appx-manifest](https://www.npmjs.com/package/get-appx-manifest)
-- [get-appx-path](https://www.npmjs.com/package/get-appx-path)
+- [exec-appx](https://www.npmjs.com/package/exec-appx)
 
 ## License
 
-This work is licensed under [The MIT License](https://opensource.org/licenses/MIT)
+This work is licensed under [The MIT License](https://opensource.org/licenses/MIT).
