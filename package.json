@@ -40,14 +40,13 @@
 		"universal windows platform"
 	],
 	"dependencies": {
-		"get-appx-path": "^0.2.2"
+		"get-appx-path": "^0.3.1"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^20.1.0",
 		"@commitlint/config-conventional": "^20.0.0",
 		"@idleberg/configs": "^0.3.1",
 		"@types/node": "^24.7.0",
-		"@types/node-powershell": "4",
 		"@vitest/coverage-v8": "^3.2.4",
 		"concurrently": "^9.2.1",
 		"knip": "^5.64.2",
