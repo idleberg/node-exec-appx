@@ -25,11 +25,11 @@ const execAppx = require('exec-appx');
 
 const appID = 'Mozilla.Firefox';
 
-	try {
-			await execAppx(appID);
-	} catch (err) {
-			console.error(err);
-	}
+try {
+		await execAppx(appID);
+} catch (err) {
+		console.error(err);
+}
 ```
 
 ### Options
