@@ -1,46 +1,60 @@
 {
-  "name": "exec-appx",
-  "version": "0.1.4",
-  "description": "Executes a Windows Store application (Appx)",
-  "license": "MIT",
-  "scripts": {
-    "fix": "eslint --fix ./src",
-    "lint:json": "jsonlint --quiet ./*.json",
-    "lint:js": "eslint ./src",
-    "lint": "npm-run-all --parallel lint:*",
-    "precommit": "npm run test",
-    "test": "eslint index.js"
-  },
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/idleberg/node-exec-appx.git"
-  },
-  "keywords": [
-    "appx",
-    "windows store",
-    "windows store app",
-    "microsoft store",
-    "universal windows platform"
-  ],
-  "dependencies": {
-    "get-appx-path": "^0.2.2"
-  },
-  "devDependencies": {
-    "eslint": "^7.18.0",
-    "eslint-plugin-json": "^2.1.2",
-    "husky": "^4.3.8",
-    "jsonlint": "^1.6.3",
-    "lint-staged": "^10.5.3",
-    "npm-run-all": "^4.1.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.json": "jsonlint --quiet",
-    "*.js": "eslint --cache --fix"
-  }
+	"name": "exec-appx",
+	"version": "0.1.4",
+	"description": "Executes a Windows Store application (Appx)",
+	"license": "MIT",
+	"scripts": {
+		"build": "tsdown",
+		"dev": "tsdown --watch",
+		"lint": "concurrently npm:lint:*",
+		"lint:biome": "biome check",
+		"lint:knip": "knip --production",
+		"lint:publint": "publint",
+		"prepack": "npm run build",
+		"prepare": "lefthook install",
+		"publish:npm": "np --any-branch",
+		"test": "vitest run"
+	},
+	"files": [
+		"dist",
+		"LICENSE"
+	],
+	"exports": {
+		"types": "./dist/index.d.ts",
+		"import": "./dist/index.js",
+		"require": "./dist/index.cjs"
+	},
+	"type": "module",
+	"engines": {
+		"node": ">=18"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/idleberg/node-exec-appx.git"
+	},
+	"keywords": [
+		"appx",
+		"windows store",
+		"windows store app",
+		"microsoft store",
+		"universal windows platform"
+	],
+	"dependencies": {
+		"get-appx-path": "^0.2.2"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^20.1.0",
+		"@commitlint/config-conventional": "^20.0.0",
+		"@idleberg/configs": "^0.3.1",
+		"@types/node": "^24.7.0",
+		"@types/node-powershell": "4",
+		"@vitest/coverage-v8": "^3.2.4",
+		"concurrently": "^9.2.1",
+		"knip": "^5.64.2",
+		"np": "^10.2.0",
+		"publint": "^0.3.14",
+		"tsdown": "^0.15.6",
+		"vitest": "^3.2.4"
+	},
+	"packageManager": "pnpm@10.18.1+sha512.77a884a165cbba2d8d1c19e3b4880eee6d2fcabd0d879121e282196b80042351d5eb3ca0935fa599da1dc51265cc68816ad2bddd2a2de5ea9fdf92adbec7cd34"
 }

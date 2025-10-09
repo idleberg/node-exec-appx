@@ -1,0 +1,6 @@
+{
+	"extends": "@idleberg/configs/tsc",
+	"compilerOptions": {
+		"lib": ["ESNext"]
+	}
+}
