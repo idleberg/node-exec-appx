@@ -6,8 +6,7 @@ import getAppxPath from 'get-appx-path';
 const spawnAsync = promisify(spawn);
 
 export async function execAppx(
-	appID: string,
-	appIndex: number | string = 0,
+	appConfig: string | { id: string; specifier?: number | string },
 	spawnArgs: readonly string[] = [],
 	spawnOptions: SpawnOptions = {},
 ) {
@@ -16,12 +15,16 @@ export async function execAppx(
 	}
 
 	const internalSpawnOptions = {
-		detached: true,
 		...spawnOptions,
+		detached: true,
 	};
 
-	const appx = await getAppxPath(appID);
-	const pathIndex = typeof appIndex === 'number' ? appIndex : appx.paths.indexOf(appIndex);
+	const appId = typeof appConfig === 'string' ? appConfig : appConfig.id;
+	const appIndex = typeof appConfig === 'string' ? 0 : (appConfig.specifier ?? 0);
+
+	const appx = await getAppxPath(appId);
+
+	const pathIndex = typeof appIndex === 'number' ? appIndex : appx.filenames.indexOf(appIndex);
 	const appPath = appx.paths[pathIndex];
 
 	if (!appPath) {

@@ -20,17 +20,25 @@ This library requires PowerShell 5.0 (or higher) and support for the Windows Sto
 
 Example usage in script:
 
-```js
-const execAppx = require('exec-appx');
-
-const appID = 'Mozilla.Firefox';
+```typescript
+import { execAppx } from 'exec-appx';
 
 try {
-		await execAppx(appID);
+		await execAppx('Mozilla.Firefox');
 } catch (err) {
 		console.error(err);
 }
 ```
+
+> [!IMPORTANT]  
+> For some applications, the AppX manifest specifies multiple executables. To deal with this special case, pass an object as the first argument.
+>
+> ```typescript
+> await execAppx({
+>		id: 'Mozilla.Firefox',
+>		specifier: 'firefox.exe' // or the index of the array
+>	})
+> ```
 
 ### Options
 
