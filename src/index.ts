@@ -1,7 +1,7 @@
 import { type SpawnOptions, spawn } from 'node:child_process';
 import { platform } from 'node:os';
 import { promisify } from 'node:util';
-import getAppxPath from 'get-appx-path';
+import { getAppxPath } from 'get-appx-path';
 
 const spawnAsync = promisify(spawn);
 
