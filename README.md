@@ -35,7 +35,7 @@ try {
 >
 > ```typescript
 > await execAppx({
->		id: 'Mozilla.Firefox',
+>		appId: 'Mozilla.Firefox',
 >		specifier: 'firefox.exe' // or the index of the array
 >	})
 > ```
