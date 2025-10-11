@@ -5,6 +5,13 @@ import { getAppxPath } from 'get-appx-path';
 
 const spawnAsync = promisify(spawn);
 
+/**
+ * Execute an AppX application by its package ID.
+ * @param appConfig the id of the AppX package, e.g.`"Mozilla.Firefox"`
+ * @param spawnArgs an array of arguments to pass to `child_process.spawn`
+ * @param spawnOptions options to pass to `child_process.spawn`
+ * @returns
+ */
 export async function execAppx(
 	appConfig: string | { appId: string; specifier?: number | string },
 	spawnArgs: readonly string[] = [],
@@ -15,8 +22,8 @@ export async function execAppx(
 	}
 
 	const internalSpawnOptions = {
-		...spawnOptions,
 		detached: true,
+		...spawnOptions,
 	};
 
 	const appId = typeof appConfig === 'string' ? appConfig : appConfig.appId;
