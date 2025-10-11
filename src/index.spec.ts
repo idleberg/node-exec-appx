@@ -12,12 +12,12 @@ vi.mock('node:child_process', () => ({
 }));
 
 vi.mock('get-appx-path', () => ({
-	default: vi.fn(),
+	getAppxPath: vi.fn(),
 }));
 
 import { spawn } from 'node:child_process';
 import { platform } from 'node:os';
-import getAppxPath from 'get-appx-path';
+import { getAppxPath } from 'get-appx-path';
 
 describe('execAppx', () => {
 	const mockGetAppxPath = vi.mocked(getAppxPath);
