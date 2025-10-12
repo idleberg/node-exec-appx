@@ -16,7 +16,7 @@ This library requires PowerShell 5.0 (or higher) and support for the Windows Sto
 
 ## Usage
 
-`execAppx(appID, spawnArgs = [], spawnOptions = {})`
+`execAppx(appID, args = [], options = {})`
 
 Example usage in script:
 
@@ -42,7 +42,7 @@ try {
 
 ### Options
 
-See [`child_process.spawn`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options) documentation for details
+See [`child_process.spawn`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options) documentation for details.
 
 ## Related
 
