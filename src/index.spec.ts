@@ -229,13 +229,13 @@ describe('execAppx', () => {
 			);
 		});
 
-		it('should not override detached option', async () => {
+		it('should allow user to override detached option', async () => {
 			await execAppx('TestApp.ID', [], { detached: false } as any);
 
 			expect(mockSpawn).toHaveBeenCalledWith(
 				expect.any(String),
 				expect.any(Array),
-				expect.objectContaining({ detached: true }),
+				expect.objectContaining({ detached: false }),
 				expect.any(Function),
 			);
 		});
