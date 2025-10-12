@@ -32,7 +32,9 @@ export async function execAppx(
 	const appx = await getAppxPath(appId);
 
 	const pathIndex =
-		typeof appIndex === 'number' ? appIndex : appx.filenames.findIndex((filename) => filename.includes(appIndex));
+		typeof appIndex === 'number'
+			? appIndex
+			: appx.filenames.findIndex((filename: string) => filename.includes(appIndex));
 	const appPath = appx.paths[pathIndex];
 
 	if (!appPath) {
