@@ -6,8 +6,8 @@ import { getAppxPath } from 'get-appx-path';
 const spawnAsync = promisify(spawn);
 
 /**
- * Execute an AppX application by its package ID.
- * @param appConfig the id of the AppX package, e.g.`"Mozilla.Firefox"`
+ * Execute an Appx application by its package ID.
+ * @param appConfig the id of the Appx package, e.g.`"Mozilla.Firefox"`
  * @param spawnArgs an array of arguments to pass to `child_process.spawn`
  * @param spawnOptions options to pass to `child_process.spawn`
  * @returns
