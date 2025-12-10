@@ -1,6 +1,6 @@
 {
 	"name": "exec-appx",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"description": "Executes a Windows Store application (Appx)",
 	"license": "MIT",
 	"scripts": {
