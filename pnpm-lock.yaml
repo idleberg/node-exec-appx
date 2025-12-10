@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       get-appx-path:
-        specifier: ^0.4.0
-        version: 0.4.0
+        specifier: ^0.4.1
+        version: 0.4.1
     devDependencies:
       '@commitlint/cli':
         specifier: ^20.2.0
@@ -1662,8 +1662,8 @@ packages:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
     engines: {node: '>=6.9.0'}
 
-  get-appx-path@0.4.0:
-    resolution: {integrity: sha512-Fur21QuKyAw2ABw5Des80Ed1vCfyRfQrOz9o8BaElAD8zPRccsafzjUbBTeezbw8K3GHBRpZOkEkQwhJGf7fmQ==}
+  get-appx-path@0.4.1:
+    resolution: {integrity: sha512-VnvXZSxWxJr10BHqBnx0xZchrGxvLFO6aNa0kkjPFV/+d9DXyt6f2PVvSiDvyMLNRk5vefa3iB1im6Oc1x0srA==}
     engines: {node: '>=18'}
 
   get-caller-file@2.0.5:
@@ -4578,7 +4578,7 @@ snapshots:
 
   gensync@1.0.0-beta.2: {}
 
-  get-appx-path@0.4.0:
+  get-appx-path@0.4.1:
     dependencies:
       node-powershell: 4.0.0
 

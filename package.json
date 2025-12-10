@@ -42,7 +42,7 @@
 		"universal windows platform"
 	],
 	"dependencies": {
-		"get-appx-path": "^0.4.0"
+		"get-appx-path": "^0.4.1"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^20.2.0",
