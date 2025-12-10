@@ -23,11 +23,7 @@ Example usage in script:
 ```typescript
 import { execAppx } from 'exec-appx';
 
-try {
-		await execAppx('Mozilla.Firefox');
-} catch (err) {
-		console.error(err);
-}
+await execAppx('Mozilla.Firefox');
 ```
 
 > [!IMPORTANT]  
