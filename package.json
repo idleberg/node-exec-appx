@@ -10,7 +10,6 @@
 		"lint:biome": "biome check",
 		"lint:e18e": "e18e-cli analyze",
 		"prepack": "npm run build",
-		"prepare": "lefthook install",
 		"publish:npm": "np --any-branch",
 		"test": "vitest run"
 	},
@@ -54,6 +53,11 @@
 		"np": "^10.2.0",
 		"tsdown": "^0.18.0",
 		"vitest": "^4.0.15"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"lefthook"
+		]
 	},
 	"packageManager": "pnpm@10.26.0+sha512.3b3f6c725ebe712506c0ab1ad4133cf86b1f4b687effce62a9b38b4d72e3954242e643190fc51fa1642949c735f403debd44f5cb0edd657abe63a8b6a7e1e402"
 }
