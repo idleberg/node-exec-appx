@@ -43,7 +43,7 @@ See [`child_process.spawn`](https://nodejs.org/api/child_process.html#child_proc
 ## Related
 
 - [get-appx-manifest](https://www.npmjs.com/package/get-appx-manifest)
-- [exec-appx](https://www.npmjs.com/package/exec-appx)
+- [get-appx-path](https://www.npmjs.com/package/get-appx-path)
 
 ## License
 
